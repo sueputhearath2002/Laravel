@@ -1,6 +1,11 @@
 <?php
 
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +21,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('about',[AboutController::class,"index"]);
+Route::get("contact",[ContactController::class,"index"]);
+Route::get("register",[RegisterController::class,"register"]);
+Route::post("register/save",[RegisterController::class,"saveRegister"]);
+Route::post("register/save",[RegisterController::class,"saveRegister"])->name("register.save");
+
+
+Route::get("product",[ProductController::class,"product"])->name("product");
+Route::Post("createProduct",[ProductController::class,"createProduct"])->name("save.product");

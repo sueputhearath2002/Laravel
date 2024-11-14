@@ -97,12 +97,13 @@
     <a href="{{url("about") }}">About</a> |
     <a href="{{ url("contact") }}"> Contact</a> |
     <a href="{{ route("product") }}"> sell product</a> |
-    <a href="{{url("register") }}">Register</a> 
+    <a href="{{url("register") }}">Register</a> |
+    <a href="{{route("upload") }}">Upload image</a> 
     <h1>Please Register page below</h1>
 
     <div class="login-box">
         <h2>Login</h2>
-        <form action="{{url("/")}}" method ="POST">
+        <form action="{{route("register.save")}}" method ="POST">
             @csrf
           <div class="user-box">
             <input type="text" name="username" required="">

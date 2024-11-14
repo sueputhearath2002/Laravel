@@ -11,7 +11,8 @@
     <a href="{{url("about") }}">About</a> |
     <a href="{{ url("contact") }}"> Contact</a> |
     <a href="{{ route("product") }}"> sell product</a> |
-    <a href="{{url("register") }}">Register</a> 
+    <a href="{{url("register") }}">Register</a>  |
+    <a href="{{route("upload") }}">Upload image</a> 
     <h1>About Screen</h1> 
     <hr>
     <p>
